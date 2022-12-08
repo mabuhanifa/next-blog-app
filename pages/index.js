@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Random from "../components/Random";
 
 export default function Home() {
   const { push } = useRouter();
@@ -10,6 +11,7 @@ export default function Home() {
       <Link href="/posts">
         <a>posts</a>
       </Link>
+      <Random/>
     </div>
   );
 }
