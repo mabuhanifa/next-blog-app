@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -6,6 +7,9 @@ export default function Home() {
     <div>
       <h1>Home</h1>
       <button onClick={() => push("/users")}>Get Users</button>
+      <Link href="/posts">
+        <a>posts</a>
+      </Link>
     </div>
   );
 }

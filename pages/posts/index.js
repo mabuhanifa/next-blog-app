@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Post from "../../components/post";
 
@@ -5,7 +6,12 @@ export default function PostList({ posts }) {
   return (
     <div>
       {posts.map((post) => (
-        <Post post={post} key={post.id} />
+        <>
+          <Link href={`/posts/${post.id}`}>
+            <a>Go</a>
+          </Link>
+          <Post post={post} key={post.id} />
+        </>
       ))}
     </div>
   );
@@ -16,7 +22,7 @@ export async function getStaticProps() {
   const result = await posts.json();
   return {
     props: {
-      posts: result.slice(0,3),
+      posts: result.slice,
     },
   };
 }
