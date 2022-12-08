@@ -2,7 +2,6 @@ import React from "react";
 import User from "../components/user";
 
 export default function Users({ users }) {
-  console.log(users);
   return (
     <div>
       <User users={users} />
