@@ -1,17 +1,11 @@
 import React from "react";
+import User from "../components/user";
 
 export default function Users({ users }) {
   console.log(users);
   return (
     <div>
-      <div className="user">
-        {users.map(({ name, id, username }) => (
-          <div key={id} className="single-user">
-            <h4>{name}</h4>
-            <h4>{username}</h4>
-          </div>
-        ))}
-      </div>
+      <User users={users} />
     </div>
   );
 }
