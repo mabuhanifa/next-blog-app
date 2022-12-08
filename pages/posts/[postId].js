@@ -14,45 +14,16 @@ export default function Post({ post }) {
 }
 
 export async function getStaticPaths() {
+  const posts = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const result = await posts.json();
+  const paths = result.map((post) => {
+    return {
+      params: { postId: `${post.id}` },
+    };
+  });
+  
   return {
-    paths: [
-      {
-        params: { postId: "1" },
-      },
-      {
-        params: { postId: "2" },
-      },
-      {
-        params: { postId: "3" },
-      },
-      {
-        params: { postId: "4" },
-      },
-      {
-        params: { postId: "5" },
-      },
-      {
-        params: { postId: "6" },
-      },
-      {
-        params: { postId: "7" },
-      },
-      {
-        params: { postId: "8" },
-      },
-      {
-        params: { postId: "9" },
-      },
-      {
-        params: { postId: "10" },
-      },
-      {
-        params: { postId: "11" },
-      },
-      {
-        params: { postId: "12" },
-      },
-    ],
+    paths,
     fallback: false,
   };
 }
