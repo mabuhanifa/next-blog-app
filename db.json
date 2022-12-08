@@ -2,22 +2,22 @@
   "news": [
     {
       "id": 1,
-      "titile": "Lorem ipsum, dolor",
+      "title": "Lorem ipsum, dolor",
       "name": " adipisicing elit."
     },
     {
       "id": 2,
-      "titile": "sit amet consectetur",
+      "title": "sit amet consectetur",
       "name": "Lorem ipsum, dolor"
     },
     {
       "id": 3,
-      "titile": "exercitationem enim accusantium.",
+      "title": "exercitationem enim accusantium.",
       "name": "Lorem ipsum, dolor"
     },
     {
       "id": 4,
-      "titile": "Officia laudantium provident cum quia.",
+      "title": "Officia laudantium provident cum quia.",
       "name": "molestiae excepturi maxime "
     }
   ]

@@ -3,7 +3,7 @@ import React from "react";
 export default function NewsArticleList({ articles }) {
   return (
     <div>
-      <h2>NewsArticleList</h2>
+      <h2>News Article List</h2>
       {articles.map((articles) => (
         <div key={articles.id}>
           <h4>{articles.title}</h4>
