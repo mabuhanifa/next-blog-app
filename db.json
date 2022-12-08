@@ -24,5 +24,11 @@
       "name": "molestiae excepturi maxime ",
       "category": "news"
     }
-  ]
+  ],
+  "dashboard": {
+    "posts": 51,
+    "likes": 24,
+    "followers": 500,
+    "following": 100
+  }
 }
