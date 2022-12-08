@@ -1,9 +1,14 @@
 import React from "react";
 
-export default function NewsArticleList() {
+export default function NewsArticleList({ articles }) {
   return (
     <div>
-      <div>NewsArticleList</div>
+      <h2>NewsArticleList</h2>
+      {articles.map((articles) => (
+        <div key={articles.id}>
+          <h4>{articles.title}</h4>
+        </div>
+      ))}
     </div>
   );
 }
