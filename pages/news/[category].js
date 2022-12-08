@@ -8,6 +8,7 @@ export default function ArticleListByCategory({ articles, category }) {
         {articles.map((articles) => (
           <div key={articles.id}>
             <h4>{articles.title}</h4>
+            <h4>{articles.name}</h4>
           </div>
         ))}
       </div>
