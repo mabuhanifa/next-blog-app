@@ -16,7 +16,9 @@ export default function ArticleListByCategory({ articles, category }) {
   );
 }
 
-export async function getServerSideProps({ params: { category } }) {
+export async function getServerSideProps({ params: { category }, req, res }) {
+  console.log(req.headers.cookie);
+  res.setHeader("Set-Cookie", ["name-shourov"]);
   const response = await fetch(
     `http://localhost:3004/news?category=${category}`
   );
