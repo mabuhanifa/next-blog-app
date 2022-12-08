@@ -3,13 +3,14 @@
     {
       "id": 1,
       "title": "Lorem ipsum, dolor",
-      "name": " adipisicing elit."
+      "name": " adipisicing elit.",
+      "category": "economics"
     },
     {
       "id": 2,
       "title": "sit amet consectetur",
       "name": "Lorem ipsum, dolor",
-      "category": "news"
+      "category": "politics"
     },
     {
       "id": 3,
