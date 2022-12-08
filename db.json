@@ -8,17 +8,20 @@
     {
       "id": 2,
       "title": "sit amet consectetur",
-      "name": "Lorem ipsum, dolor"
+      "name": "Lorem ipsum, dolor",
+      "category": "news"
     },
     {
       "id": 3,
       "title": "exercitationem enim accusantium.",
-      "name": "Lorem ipsum, dolor"
+      "name": "Lorem ipsum, dolor",
+      "category": "sports"
     },
     {
       "id": 4,
       "title": "Officia laudantium provident cum quia.",
-      "name": "molestiae excepturi maxime "
+      "name": "molestiae excepturi maxime ",
+      "category": "news"
     }
   ]
 }
