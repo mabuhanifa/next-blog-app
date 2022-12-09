@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function EventList({ events }) {
+export default function EventList({ eventList }) {
+  const [events, setEvents] = useState(eventList);
+  const fetchEvents = async () => {
+    const res = await fetch("http://localhost:3004/events?category=sports");
+    const data = await res.json();
+    setEvents(data);
+  };
   return (
     <div>
+      <button onClick={fetchEvents}>Sports</button>
       <div>
         {events &&
           events.map((event) => (
@@ -21,7 +28,7 @@ export async function getServerSideProps() {
   const data = await res.json();
   return {
     props: {
-      events: data,
+        eventList: data,
     },
   };
 }
