@@ -23,12 +23,13 @@ export default function EventList({ eventList }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ query: { category } }) {
+  const queryString = category ? "category" : "";
   const res = await fetch("http://localhost:3004/events");
   const data = await res.json();
   return {
     props: {
-        eventList: data,
+      eventList: data,
     },
   };
 }
