@@ -1,14 +1,14 @@
 import React from "react";
 
-export default function EventList({ event }) {
+export default function EventList({ events }) {
   return (
     <div>
       <div>
-        {event &&
-          event.map((event) => (
+        {events &&
+          events.map((event) => (
             <div key={event.id}>
-              <h2> {event.id}</h2>
-              <h2> {event.id}</h2>
+              <h2> {event.title}</h2>
+              <h2> {event.category}</h2>
             </div>
           ))}
       </div>
@@ -18,9 +18,10 @@ export default function EventList({ event }) {
 
 export async function getServerSideProps() {
   const res = await fetch("http://localhost:3004/events");
+  const data = await res.json();
   return {
     props: {
-      events: await res.json(),
+      events: data,
     },
   };
 }
