@@ -14,6 +14,10 @@ export default function Home() {
         <a>posts</a>
       </Link>
       <br />
+      <Link href="/comments">
+        <a>comments</a>
+      </Link>
+      <br />
       <Link href="/events">
         <a>events</a>
       </Link>

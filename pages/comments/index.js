@@ -8,6 +8,7 @@ export default function CommentsPage() {
     const data = await res.json();
     setComments(data);
   };
+
   const submitComment = async () => {
     const res = await fetch("http://localhost:3000/api/comments", {
       method: "POST",
