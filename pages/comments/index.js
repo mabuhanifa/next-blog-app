@@ -8,9 +8,24 @@ export default function CommentsPage() {
     const data = await res.json();
     setComments(data);
   };
+  const submitComment = async () => {
+    const res = await fetch("http://localhost:3000/api/comments", {
+      method: "POST",
+      body: JSON.stringify(comment),
+      headers: { "Content-Type": "application/json" },
+    });
+    const data = await res.json();
+    console.log(data);
+  };
+
   return (
     <div>
-      <input type="text" />
+      <input
+        type="text"
+        value={comment}
+        onChange={(e) => setComment(e.target.value)}
+      />
+      <button onClick={submitComment}>Submit</button>
       <button onClick={fetchComments}>Load Comments</button>
       {comments &&
         comments.map((c) => (
