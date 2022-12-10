@@ -10,7 +10,12 @@ export default function CommentsPage() {
   return (
     <div>
       <button onClick={fetchComments}>Load Comments</button>
-      
+      {comments &&
+        comments.map((c) => (
+          <div key={c.id}>
+            <h2>{c.text}</h2>
+          </div>
+        ))}
     </div>
   );
 }
