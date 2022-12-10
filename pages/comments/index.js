@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export default function CommentsPage() {
   const [comments, setComments] = useState([]);
+  const [comment, setComment] = useState("");
   const fetchComments = async () => {
     const res = await fetch("http://localhost:3000/api/comments");
     const data = await res.json();
@@ -9,6 +10,7 @@ export default function CommentsPage() {
   };
   return (
     <div>
+      <input type="text" />
       <button onClick={fetchComments}>Load Comments</button>
       {comments &&
         comments.map((c) => (
