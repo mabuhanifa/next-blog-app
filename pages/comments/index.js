@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function CommentsPage() {
   const [comments, setComments] = useState([]);
   const fetchComments = async () => {
-    const res = await fetch("http://localhost:3004/api/comments");
+    const res = await fetch("http://localhost:3000/api/comments");
     const data = await res.json();
     setComments(data);
   };
