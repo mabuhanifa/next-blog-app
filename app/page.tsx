@@ -1,6 +1,7 @@
 import Component from "@/components/Carousel";
 import { InfiniteSliderHoverSpeed } from "@/components/InfiniteSliderHoverSpeed";
 import { InfiniteSliderVertical } from "@/components/InfiniteSliderVertical";
+import { Slider } from "@/components/Slider";
 import { TextEffectSpeed } from "@/components/TextEffectSpeed";
 
 export default function Home() {
@@ -17,6 +18,9 @@ export default function Home() {
       </div>
       <div className="my-10 mx-5 lg:mx-20 2xl:mx-80 flex justify-center">
         <TextEffectSpeed />
+      </div>
+      <div className="my-10 mx-5 lg:mx-20 2xl:mx-40">
+        <Slider />
       </div>
     </>
   );
